@@ -446,13 +446,13 @@ if (empty($course->showonlysection0)) {
         if (isset($course->topicheading) && !empty($course->topicheading)) {
             $heading_prefix = $course->topicheading;
         } else {
-            $heading_prefix = 'Week ';
+            $heading_prefix = get_string('namefn','format_fntabs').' ';
         }
     } else {
         $section = 1;
         $numsections = 1;
         $weekdate = 0;
-        $heading_prefix = 'Section ';
+        $heading_prefix = get_string('sectionname','format_fntabs').' ';
     }
     // Now all the normal modules by topic
     // Everything below uses "section" terminology - each "section" is a topic.

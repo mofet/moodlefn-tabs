@@ -200,7 +200,7 @@ class course_format_fn extends course_format {
         if (isset($this->course->topicheading) && !empty($this->course->topicheading)) {
             $strtopicheading = $this->course->topicheading;
         } else {
-            $strtopicheading = 'Week';
+            $strtopicheading = get_string('namefn','format_fntabs');
         }
         $context = get_context_instance(CONTEXT_COURSE, $this->course->id);
         $isteacher = has_capability('moodle/course:update', $this->context);
@@ -322,7 +322,7 @@ class course_format_fn extends course_format {
                     '<a href="' . $url . '&selected_week=0">All</a></td>';
         } else {
             $nxt = ($tabhigh + 1) * 1000;
-            $actbar .= '<td id="fn_tab_next" height="25"><a href="' . $url . '&selected_week=' . $nxt . '">Next</a></td>';
+            $actbar .= '<td id="fn_tab_next" height="25"><a href="' . $url . '&selected_week=' . $nxt . '">'.get_string("next","format_fntabs").'</a></td>';
         }
         $actbar .= '<td width="1" align="center" height="25"></td>';
         $actbar .= '</tr>';

@@ -218,3 +218,4 @@ $string['showallweeks']='Show all weeks';
 $string['hideweekfromothers']='Hide week';
 $string['showweekfromothers']='Show week';
 
+$string['next']='Next';
