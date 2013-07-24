@@ -118,6 +118,10 @@ table.fnmarkingblock tbody {
     text-align: left;
     writing-mode: tb-rl;
 }
+.format-fntabs.dir-rtl .gradeactcol {
+    text-align: right;
+    writing-mode: tb-lr;
+}
 div.fnintro {
     width: 100%;
 }
@@ -261,8 +265,17 @@ tr.oddrow {
     text-align: right;
     padding-right: 0.5em;
 }
+.dir-rtl #fn_tab_previous {
+    text-align: left;
+    padding-left: 0.5em;
+    padding-right: 0;
+}
 #fn_tab_next {
     padding-left: 0.5em;
+}
+#fn_tab_next {
+    padding-right: 0.5em;
+    padding-left: 0;
 }
 
 .weekcompletedstatus {
@@ -330,6 +343,9 @@ table {
 }
 #page-course-view-fntabs .weeks .fntopicsoutlineinner ul.section li {
     text-align: left;
+}
+#page-course-view-fntabs.dir-rtl .weeks .fntopicsoutlineinner ul.section li {
+    text-align: right;
 }
 #page-course-view-fntabs .weeks .fntopicsoutlineinner ul.section table td{
     padding: 5px;
@@ -402,8 +418,11 @@ h2.fnoutlineheadingblock1 {
     width:86px;
     max-width:86px;
 }
-.mod-indent-1 {
+.format-fntabs .mod-indent-1 {
     margin-left: 0px !important;
+}
+.format-fntabs.dir-rtl .mod-indent-1 {
+    margin-right: 0px !important;
 }
 
 .mform .fitem fieldset.fgroup label, .mform .fradio label, .mform .fcheckbox label, .mform fieldset.fdate_selector label{
@@ -445,3 +464,5 @@ h2.fnoutlineheadingblock1 {
 .headingwrap{
     margin-top:5px;
 }
+.format-fntabs.dir-rtl td[align=left] {text-align: right;}
+.format-fntabs.dir-rtl td[align=right] {text-align: left;}
